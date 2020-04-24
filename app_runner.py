@@ -11,12 +11,13 @@ def index():
   return render_template("index.html")
 
 #list of censored words from swearWords.txt
-with open("swearWords.txt") as fobj:
-  swearWordstxt = fobj.read()
-profane_terms = swearWordstxt.split()
+
 
 #censor_text function
 def censor_text(usrtxt):
+  with open("swearWords.txt") as fobj:
+    swearWordstxt = fobj.read()
+    profane_terms = swearWordstxt.split()
   censored_text = usrtxt
   for term in profane_terms:
     location = censored_text.find(term)
