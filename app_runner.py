@@ -13,7 +13,7 @@ def index():
 def user_input_post():
   text = request.form["text"]
   processed_text = text.upper()
-  return render_template("index.html", processed_text = processed_text)
+  return render_template("index.html", text=text, processed_text = processed_text)
 
 
 

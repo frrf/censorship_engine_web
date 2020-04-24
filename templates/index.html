@@ -12,7 +12,7 @@
   <h2>Enter text to be censored below:</h2>
   {% block content %}
   <form method="POST" action="#">
-    <textarea name="text" id="input" placeholder="Type (or paste) here..." spellcheck="false" cols="60" rows="10"></textarea>
+    <textarea name="text" id="input" placeholder="Type (or paste) here..." spellcheck="false" cols="60" rows="10">{{text}}</textarea>
     <button type="submit" id="submit_text" value="submit">Submit</button>
   </form>
   {% endblock %}
