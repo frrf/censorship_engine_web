@@ -10,11 +10,12 @@ app = Flask(__name__)
 def index():
   return render_template("index.html")
 
-#censor_text function
-#list of censored words
-profane_terms = ["fuck"]
+#list of censored words from swearWords.txt
+with open("swearWords.txt") as fobj:
+  swearWordstxt = fobj.read()
+profane_terms = swearWordstxt.split()
 
-#censor multiple
+#censor_text function
 def censor_text(usrtxt):
   censored_text = usrtxt
   for term in profane_terms:
