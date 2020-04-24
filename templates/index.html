@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Censorship Engine</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="{{ url_for('static',filename='styles/style.css') }}">
 </head>
 
 <body>
@@ -15,6 +15,7 @@
     <textarea name="input" id="input" placeholder="Type (or paste) here..." spellcheck="false" cols="60" rows="10"></textarea>
     <button type="submit" id="submit_text">Submit</button>
   </form>
+
   <textarea name="output" id="output" placeholder="Result goes here..." spellcheck="false" cols="60" rows="10"></textarea>
 
 </body>
