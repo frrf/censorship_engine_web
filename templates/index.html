@@ -10,13 +10,14 @@
 <body>
   <h1>Censorship Engine</h1>
   <h2>Enter text to be censored below:</h2>
-  
-  <form method="post" action="index.html">
-    <textarea name="input" id="input" placeholder="Type (or paste) here..." spellcheck="false" cols="60" rows="10"></textarea>
-    <button type="submit" id="submit_text">Submit</button>
+  {% block content %}
+  <form method="POST" action="#">
+    <textarea name="text" id="input" placeholder="Type (or paste) here..." spellcheck="false" cols="60" rows="10"></textarea>
+    <button type="submit" id="submit_text" value="submit">Submit</button>
   </form>
+  {% endblock %}
 
-  <textarea name="output" id="output" placeholder="Result goes here..." spellcheck="false" cols="60" rows="10"></textarea>
+  <textarea name="output" id="output" placeholder="Result goes here..." spellcheck="false" cols="60" rows="10">{{processed_text}}</textarea>
 
 </body>
 
