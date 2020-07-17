@@ -20,6 +20,7 @@ html {
 
 body {
   height: 100vh;
+  width: auto;
   background-color: rgb(205, 205, 255);
 }
 
@@ -63,9 +64,6 @@ h1 {
 
 p {
   color: rgb(150, 37, 37);
-}
-
-p {
   font-family: 'Josefin Sans', sans-serif;
 }
 
@@ -95,6 +93,7 @@ section {
   text-align: justify;
   background: rgb(218, 226, 255);
   margin: 1em;
+  height: 100vh;
 }
 
 form {
@@ -140,4 +139,36 @@ img {
 
 #output {
   margin-top: 1em;
+}
+
+
+@media screen and (max-width: 425px) {
+  h1 {
+    font-size: 4em;
+  }
+  h2 {
+    font-size: 2em;
+  }
+  form {
+    flex-direction: column;
+  }
+  .button_area {
+    align-self: center;
+    padding-top: 1em;
+    
+  }
+  .img_button {
+    padding-top: 1em;
+  }
+  p{
+    font-size: 2rem;
+    margin-bottom: 0px;
+  }
+  #output {
+    margin-top: 25px;
+  }
+  form {
+    margin-top: 25px;
+  }
+  
 }
