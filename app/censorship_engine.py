@@ -9,5 +9,5 @@ def censor_text(usrtxt):
       continue
     else:
       lot = len(term)
-      censored_text = censored_text.replace(term, '####')
+      censored_text = censored_text.replace(term, '🧼🧼🧼🧼')
   return censored_text
