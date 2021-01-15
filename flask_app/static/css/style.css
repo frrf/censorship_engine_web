@@ -38,7 +38,6 @@ body {
 }
 
 h1 {
-  font-weight: bold;
   font-size: 10vw;
   margin-top: 1em;
   font-family: title;
@@ -96,8 +95,12 @@ section {
   display: block;
   text-align: justify;
   background: rgb(218, 226, 255);
-  margin: 1em;
   height: 100vh;
+  background-clip: content-box;
+}
+/*--- force fix for section padding/vh issue ---*/
+.section_wrapper {
+  padding: 1em;
 }
 
 form {
@@ -148,7 +151,7 @@ img {
 }
 
 /*-----Mobile View adjustments-----*/
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 426px) {
   h1 {
     font-size: 4em;
     margin-top: 3vh;
@@ -186,10 +189,12 @@ img {
 
 }
 
+
+
 /*--- result page styling ---*/
 
 .output[readonly]{
-    background-color:rgb(220, 238, 255);
+    background-color:rgb(246, 236, 255);
 }
 
 .output_container {
