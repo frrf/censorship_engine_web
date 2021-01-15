@@ -14,8 +14,10 @@ def index():
 def user_input_post():
   text = request.form["text"]
   processed_text = censor_text(text)
-  return render_template("index.html", text=text, processed_text = processed_text)
+  return render_template("result.html", text=text, processed_text = processed_text)
 
 if __name__ == "__main__":
   app.run(debug=True)
+
+
   

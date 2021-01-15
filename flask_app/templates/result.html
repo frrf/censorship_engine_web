@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <!-- Censor Engine Output-->
+  <p class="result">Result:</p>
+  <textarea class="form-control" name="output" id="output" placeholder="Result goes here..." spellcheck="false" cols="40" rows="5">{{processed_text}}</textarea>
+  <!-- Censor Engine Output End-->
+
+  <a href="{{ url_for('index') }}">Want to Censor some more?</a>
+</body>
+</html>
