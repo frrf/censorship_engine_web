@@ -16,5 +16,15 @@ def user_input_post():
   processed_text = censor_text(text)
   return render_template("result.html", text=text, processed_text = processed_text)
 
+@app.route("/#")
+def again():
+  return render_template("again.html")
+
+@app.route("/#", methods=["POST"])
+def user_input_post_again():
+  text = request.form["text"]
+  processed_text = censor_text(text)
+  return render_template("result.html", text=text, processed_text = processed_text)
+
 if __name__ == "__main__":
   app.run(debug=True)
