@@ -35,12 +35,15 @@ body {
   /* justify-content: center; */
   align-items: center;
   text-align: center;
+  
 }
 
 h1 {
   font-size: 10vw;
   margin-top: 1em;
   font-family: title;
+  user-select: none;
+  color: rgb(62, 226, 255);
 }
 
 h1 h2 {
@@ -54,16 +57,18 @@ h2 {
   margin-bottom: 5%;
   font-family: body;
   font-size: 3em;
-}
-
-h1 {
-  color: rgb(58, 225, 255);
+  user-select: none;
 }
 
 p {
   color: rgb(79, 0, 116);
   font-family: 'Josefin Sans', sans-serif;
-  font-size: 2em;
+  font-size: 5vh;
+  user-select: none;
+}
+
+a {
+  user-select: none;
 }
 
 .result {
@@ -93,7 +98,6 @@ p {
 section {
   padding: 1em;
   display: block;
-  text-align: justify;
   background: rgb(218, 226, 255);
   height: 100vh;
   background-clip: content-box;
@@ -101,6 +105,11 @@ section {
 /*--- force fix for section padding/vh issue ---*/
 .section_wrapper {
   padding: 1em;
+
+}
+
+#input {
+  border-radius: .5rem;
 }
 
 form {
@@ -150,7 +159,7 @@ img {
 }
 
 /*-----Mobile View adjustments-----*/
-@media screen and (max-width: 660px) {
+@media screen and (max-width: 518px) {
   h1 {
     font-size: 4em;
     margin-top: 3vh;
@@ -164,7 +173,7 @@ img {
   }
   .button_area {
     align-self: center;
-    padding-top: 7vw;
+    padding-top: 8vh;
   }
   .img_button {
     padding-top: 1em;
@@ -174,7 +183,7 @@ img {
     height: 30vh;
   }
   p{
-    font-size: 10vw;
+    font-size: 5vh;
     margin-bottom: 0px;
   }
   #output {
