@@ -66,18 +66,13 @@ p {
   font-size: 5vh;
   user-select: none;
 }
-/*--- Turns P tag into a flexbox with a home button element inside ---*/
-.home_flex {
-  display: flex;
-  justify-content: space-between;
+
+.enter {
+  font-size: 8vh;
+  user-select: none;
+  margin-bottom: 4vh;
 }
 
-.button_home {
-  background-color: transparent;
-  border: none;
-  vertical-align:text-bottom;
-  fill: rgb(79, 0, 116);
-}
 
 a {
   user-select: none;
@@ -101,7 +96,7 @@ a {
   font-size: 1.5em;
 }
 
-.down:hover {
+.down:hover  {
   transform: scale(1.2);
   transition: .5s;
   color: rgb(79, 0, 116);
@@ -117,7 +112,6 @@ section {
 /*--- force fix for section padding/vh issue ---*/
 .section_wrapper {
   padding: 1em;
-
 }
 
 #input {
@@ -171,6 +165,8 @@ img {
   margin-bottom: 5vh;
 }
 
+
+
 /*-----Mobile View adjustments-----*/
 @media screen and (max-width: 518px) {
   h1 {
@@ -195,7 +191,7 @@ img {
     width: 30vh;
     height: 30vh;
   }
-  p{
+  .enter{
     font-size: 4.5vh;
     margin-bottom: 0px;
   }
@@ -217,6 +213,10 @@ img {
     background-color:rgb(246, 236, 255);
 }
 
+.original_input[readonly]{
+    background-color:rgb(236, 250, 255);
+}
+
 .output_container {
   height: 94vh;
   padding: 1em;
@@ -228,9 +228,26 @@ img {
   justify-content: space-between;
 }
 
+/*--- Turns P tag into a flexbox with a home button element inside ---*/
+.home_flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.button_home {
+  background-color: transparent;
+  border: none;
+  vertical-align:text-bottom;
+  fill: rgb(79, 0, 116);
+}
+
+.button_home:hover {
+  transform: scale(1.5);
+  transition: .5s;
+}
+
 .button_refresh {
   fill: rgb(79, 0, 116);
-
 }
 
 /*--- Return home (a link) ---*/
