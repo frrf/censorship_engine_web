@@ -18,9 +18,18 @@
   <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
 
 </head>
+<body>
   <section id="initial">
     <div class="section_wrapper">
-    <p>Enter text to be censored below:</p>
+    <p class="home_flex">Enter text to be censored below:
+      <button class="button_home">
+        <a href="{{ url_for('index') }}">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+            <path d="M3,13h1v2v5c0,1.103,0.897,2,2,2h3h6h3c1.103,0,2-0.897,2-2v-5v-2h1c0.404,0,0.77-0.244,0.924-0.617 c0.155-0.374,0.069-0.804-0.217-1.09l-9-9c-0.391-0.391-1.023-0.391-1.414,0l-9,9c-0.286,0.286-0.372,0.716-0.217,1.09 C2.23,12.756,2.596,13,3,13z M10,20v-5h4v5H10z M12,4.414l6,6V15l0,0l0.001,5H16v-5c0-1.103-0.897-2-2-2h-4c-1.103,0-2,0.897-2,2v5 H6v-5v-3v-1.586L12,4.414z"/>
+          </svg>
+        </a>
+      </button>
+    </p>
 
     <!-- User Input -->
     {% block content %}
@@ -28,7 +37,7 @@
         <textarea class="form-control" name="text" id="input" placeholder="Type (or paste) here..." spellcheck="false" cols="20" rows="5">{{text}}</textarea>
 
       <!-- button -->
-        <div class="button_area" id="go">  
+        <div class="button_area" id="go">
           <input class="responsive_mouth" type="image" src="static/images/main.png" value="submit">
       </form>
         {% endblock %}

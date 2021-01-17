@@ -66,6 +66,18 @@ p {
   font-size: 5vh;
   user-select: none;
 }
+/*--- Turns P tag into a flexbox with a home button element inside ---*/
+.home_flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.button_home {
+  background-color: transparent;
+  border: none;
+  vertical-align:text-bottom;
+  fill: rgb(79, 0, 116);
+}
 
 a {
   user-select: none;
