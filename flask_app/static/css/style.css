@@ -168,6 +168,7 @@ img {
 
 #output {
   height: 18%;
+  margin-bottom: 5vh;
 }
 
 /*-----Mobile View adjustments-----*/
@@ -224,11 +225,12 @@ img {
   text-align: justify;
   background: rgb(218, 226, 255);
   margin: 1em;
+  justify-content: space-between;
 }
 
 .button_refresh {
   fill: rgb(79, 0, 116);
-  
+
 }
 
 /*--- Return home (a link) ---*/
